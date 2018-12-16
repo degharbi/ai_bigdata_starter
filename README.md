@@ -68,3 +68,36 @@ $HOME/kafka/bin/kafka-server-start.sh $HOME/kafka/config/server.properties > /ho
 notebook --allow-root
 ```
 
+
+**PRO-TIP:**
+
+Using proper docker commands you can:
+
+Start one service using one line:
+```bash
+docker run -it -p 8888:8888 -v `pwd`:/home/guest/host Jonarod/ai_bigdata_starter notebook --allow-root
+```
+
+Enter in a running container:
+```
+# first check running docker instances:
+docker ps
+
+CONTAINER ID        IMAGE                        COMMAND      CREATED             STATUS              PORTS                    NAMES
+490ac3c59958        Jonarod/ai_bigdata_starter   "..."        18 seconds ago      Up 17 seconds       0.0.0.0:8888->8888/tcp   gifted_galileo
+
+# Then run
+docker exec -it <RUNNING DOCKER ID HERE> bash
+```
+
+
+Install other packages:
+```bash
+docker exec <RUNNING CONTAINER ID HERE> bash pip install xgboost
+```
+
+
+```bash
+docker exec <RUNNING CONTAINER ID HERE> bash yum install unzip
+```
+
