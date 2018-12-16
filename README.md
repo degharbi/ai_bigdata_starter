@@ -1,7 +1,7 @@
 # Docker for Artificial Inteligence and Big Data
 
 ```bash
-docker run -it --rm --privileged -v `pwd`:/home/guest/host -p 23:22 -p 4040:4040 -p 5601:5601 -p 8888:8888 -p 9200:9200 -p 9300:9300 Jonarod/ai_bigdata_starter
+docker run -it --rm --privileged -v `pwd`:/home/guest/host -p 23:22 -p 4040:4040 -p 5601:5601 -p 8888:8888 -p 9200:9200 -p 9300:9300 jonarod/ai_bigdata_starter
 ```
 
 Comes with:
@@ -20,7 +20,7 @@ Comes with:
 First of all, start the container:
 
 ```bash
-docker run -it --rm --privileged -v `pwd`:/home/guest/host -p 23:22 -p 4040:4040 -p 5601:5601 -p 8888:8888 -p 9200:9200 -p 9300:9300 Jonarod/ai_bigdata_starter
+docker run -it --rm --privileged -v `pwd`:/home/guest/host -p 23:22 -p 4040:4040 -p 5601:5601 -p 8888:8888 -p 9200:9200 -p 9300:9300 jonarod/ai_bigdata_starter
 ```
 
 The command will start a pseudo-tty session in bash. There you can start services all at once using:
@@ -75,7 +75,7 @@ Using proper docker commands you can:
 
 Start one service using one line:
 ```bash
-docker run -it -p 8888:8888 -v `pwd`:/home/guest/host Jonarod/ai_bigdata_starter notebook --allow-root
+docker run -it -p 8888:8888 -v `pwd`:/home/guest/host jonarod/ai_bigdata_starter notebook --allow-root
 ```
 
 Enter in a running container:

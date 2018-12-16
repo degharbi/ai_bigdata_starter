@@ -53,6 +53,7 @@ RUN pip install kaggle
 #Install Kafka Python module
 RUN pip install kafka-python
 
+
 USER root
 
 
